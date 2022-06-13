@@ -30,5 +30,9 @@
     "node-html-scraper": "^1.0.9",
     "prompt-sync": "^4.2.0",
     "table-scraper": "^1.0.3"
-  }
+  },
+  "engines": {
+    "node": "16.x",
+    "npm": "7.x"
+ }
 }
