@@ -26,7 +26,7 @@ module.exports = {
                     .setDescription('I didn\'t quite catch that; try rewording your question.')
                     .setThumbnail(image)
                     .setFooter('Made by Jayleaf | Powered by Statmuse', 'https://www.statmuse.com/favicon.ico')
-                    .setAuthor(`\u200b`, interaction.user.displayAvatarURL())
+                    .setAuthor(`Question asked by ${interaction.user.name}`, interaction.user.displayAvatarURL())
                     .setColor('#0099ff')
                 interaction.reply({embeds: [embed]})
                 return;
