@@ -26,7 +26,7 @@ module.exports = {
                     .setDescription('I didn\'t quite catch that; try rewording your question.')
                     .setThumbnail(image)
                     .setFooter('Made by Jayleaf | Powered by Statmuse', 'https://www.statmuse.com/favicon.ico')
-                    .setAuthor(`Question asked by ${interaction.user.name}`, interaction.user.displayAvatarURL())
+                    .setAuthor(`Question asked by ${interaction.user.username}`, interaction.user.displayAvatarURL())
                     .setColor('#0099ff')
                 interaction.reply({embeds: [embed]})
                 return;
@@ -37,7 +37,7 @@ module.exports = {
                 .setDescription(answer)
                 .setThumbnail(image)
                 .setFooter('Made by Jayleaf | Powered by Statmuse', 'https://www.statmuse.com/favicon.ico')
-                .setAuthor(`Question asked by ${interaction.user.name}`, interaction.user.displayAvatarURL())
+                .setAuthor(`Question asked by ${interaction.user.username}`, interaction.user.displayAvatarURL())
                 .setColor('#0099ff')
             interaction.reply({embeds: [embed]})
             return;
@@ -50,7 +50,7 @@ module.exports = {
                     .setDescription(answer)
                     .setThumbnail(image)
                     .setFooter('Made by Jayleaf | Powered by Statmuse', 'https://www.statmuse.com/favicon.ico')
-                    .setAuthor(`Question asked by ${interaction.user.name}`, interaction.user.displayAvatarURL())
+                    .setAuthor(`Question asked by ${interaction.user.username}`, interaction.user.displayAvatarURL())
                     .setColor('#0099ff')
                 interaction.reply({embeds: [embed]})
                 return;
