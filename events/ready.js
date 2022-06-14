@@ -28,15 +28,18 @@ module.exports = {
         process.once('updateClientActivity', () => {
             console.log(`[INFO] Connected to Discord as ${client.user.tag} on Shard ${client.shardId}.`);
 
+        setInterval(() => {
             client.user.setPresence({
                 activities: [
                     {
-                        name: `Browsing Stats for ${client.users.cache.size} users`,
+                        name: `Browsing Stats for ${client.guilds.cache.map((g) => g.memberCount).reduce((a, c) => a + c)} users`,
                         type: 'PLAYING'
                     }
                 ],
                 status: 'online'
             });
+        }, 15000)
+            
         });
     }
 }
