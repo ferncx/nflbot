@@ -31,7 +31,7 @@ module.exports = {
             client.user.setPresence({
                 activities: [
                     {
-                        name: `Browsing Stats on ${client.guilds.cache.size} servers`,
+                        name: `Browsing Stats for ${client.users.cache.size} users`,
                         type: 'PLAYING'
                     }
                 ],
