@@ -3,6 +3,7 @@ const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
 const fetch = require('node-fetch');
 const Discord = require('discord.js')
+const stringSimilarity = require("string-similarity");
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -19,7 +20,8 @@ module.exports = {
         const dom = new JSDOM(rawHtml)
         try {
             const answer = dom.window.document.getElementsByClassName('nlg-answer')[0].children[0].textContent
-            if(answer == interaction.options.getString('question')) {
+            similarity = stringSimilarity.compareTwoStrings(answer, interaction.options.getString('question'))
+            if(similarity > 0.9) {
                 const image = dom.window.document.getElementsByClassName('h-44 md:h-52 self-center md:self-end mt-2 md:mt-0 md:pl-6 md:pr-1.5 select-none')[0].src
                 const embed = new Discord.MessageEmbed()
                     .setTitle(`Question: ${interaction.options.getString('question')}`)
