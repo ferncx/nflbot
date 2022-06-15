@@ -1,7 +1,7 @@
 {
-  "name": "discord-bot-starter",
+  "name": "stats",
   "version": "1.0.0",
-  "description": "A skeleton repository for Discord.js projects.",
+  "description": "A sports stats bot, powered by statmuse.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -10,14 +10,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shiva-hack/discord-bot-starter.git"
+    "url": "git+https://github.com/Jayleaf/nflbot.git"
   },
-  "author": "Shivam Dhruva",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/shiva-hack/discord-bot-starter/issues"
-  },
-  "homepage": "https://github.com/shiva-hack/discord-bot-starter#readme",
+  "author": "Jayleaf",
+  "homepage": "https://github.com/Jayleaf/nflbot#readme",
   "dependencies": {
     "@discordjs/builders": "^0.8.2",
     "@discordjs/rest": "^0.1.0-canary.0",
