@@ -25,7 +25,7 @@ module.exports = {
         }
 
         const { AutoPoster } = require('topgg-autoposter')
-        const poster = AutoPoster('topggtoken', client) // your discord.js or eris client
+        const poster = AutoPoster('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk4NTc5OTQyNDEwODI2OTU2OSIsImJvdCI6dHJ1ZSwiaWF0IjoxNjczNzE4ODk2fQ.csA9kbw1Fhe6pBlg1KpLFGEXKeJTpJCn803dS3yHOLc', client) // your discord.js or eris client
 
         // optional
         poster.on('posted', (stats) => { // ran when succesfully posted
