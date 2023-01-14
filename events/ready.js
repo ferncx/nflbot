@@ -24,10 +24,18 @@ module.exports = {
             fs.writeFileSync("./configuration.json", JSON.stringify(configuration, null, 2));
         }
 
+        const { AutoPoster } = require('topgg-autoposter')
+        const poster = AutoPoster('topggtoken', client) // your discord.js or eris client
+
+        // optional
+        poster.on('posted', (stats) => { // ran when succesfully posted
+        console.log(`Posted stats to Top.gg | ${stats.serverCount} servers`)
+        })
+
         // Listens for the updateClientActivity event and updates the client presence.
         process.once('updateClientActivity', () => {
             console.log(`[INFO] Connected to Discord as ${client.user.tag} on Shard ${client.shardId}.`);
-
+        
         setInterval(() => {
             client.user.setPresence({
                 activities: [
