@@ -12,9 +12,9 @@ module.exports = {
         .addStringOption(option => option.setName('question').setRequired(true).setDescription('The question you\'d like to ask.')),
 
     async execute(interaction) {
-        let atQ = interaction.options.getString('question').replace(' ', '-')
-        var query = atQ.includes("stats") ? atQ.replace('stats', '-stats') : `${atQ}-stats`.replace(' ', '')
-        query = query.replace('  ', '-')
+        let question = interaction.options.getString('question').includes("stats") ? interaction.options.getString('question') : `${interaction.optitString('question')}-stats`
+        let atQ = question.replace(' ', '-')
+        var query = atQ
         console.log(query)
         const url = `https://www.statmuse.com/ask/${query}`
         const data = await fetch(url)
