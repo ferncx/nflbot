@@ -15,6 +15,7 @@ module.exports = {
         let atQ = interaction.options.getString('question').replace(' ', '-')
         var query;
         interaction.options.getString('question').includes("stats") ? query = `${atQ}` : query = `${atQ}-stats`
+        query = query.replace(' ', '')
         const url = `https://www.statmuse.com/ask/${query}`
         const data = await fetch(url)
         const rawHtml = await data.text()    
