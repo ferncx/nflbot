@@ -12,7 +12,7 @@ module.exports = {
         .addStringOption(option => option.setName('question').setRequired(true).setDescription('The question you\'d like to ask.')),
 
     async execute(interaction) {
-        let question = interaction.options.getString('question').includes("stats") ? interaction.options.getString('question') : `${interaction.optitString('question')} stats`
+        let question = interaction.options.getString('question').includes("stats") ? interaction.options.getString('question') : `${interaction.options.getString('question')} stats`
         console.log(question)
         let atQ = question.replace(/ /g, '-')
         var query = atQ
