@@ -32,7 +32,7 @@ module.exports = {
             if(similarity > 0.9) { // runs if the answer is similar enough to the question for the reasoning above
                 const image = dom.window.document.getElementsByClassName('h-44 md:h-52 self-center md:self-end mt-2 md:mt-0 md:pl-6 md:pr-1.5 select-none')[0].src // grabs the statmuse player image
                 const embed = new Discord.MessageEmbed()
-                    .setTitle(`Question: "*${interaction.options.getString('question')}*"`)
+                    .setTitle(`[Question: "*${interaction.options.getString('question')}*"](${url})`)
                     .setDescription('I didn\'t quite catch that; try rewording your question.')
                     .setThumbnail(image)
                     .setFooter({text: 'Made by Jayleaf | Powered by Statmuse', iconURL: 'https://i.imgur.com/uENX5KO.jpg' })
@@ -44,7 +44,7 @@ module.exports = {
             // normal function; runs if the answer is not too similar to the question
             const image = dom.window.document.getElementsByClassName('h-44 md:h-52 self-center md:self-end mt-2 md:mt-0 md:pl-6 md:pr-1.5 select-none')[0].src
             const embed = new Discord.MessageEmbed()
-            .setTitle(`Question: "*${interaction.options.getString('question')}*"`)
+                .setTitle(`[Question: "*${interaction.options.getString('question')}*"](${url})`)
                 .setDescription(answer)
                 .setThumbnail(image)
                 .setFooter({text: 'Made by Jayleaf | Powered by Statmuse', iconURL: 'https://i.imgur.com/uENX5KO.jpg' })
@@ -58,7 +58,7 @@ module.exports = {
                 const answer = dom.window.document.getElementsByClassName('nlg-answer')[0].textContent
                 const image = dom.window.document.getElementsByClassName('h-44 md:h-52 self-center md:self-end mt-2 md:mt-0 md:pl-6 md:pr-1.5 select-none')[0].src
                 const embed = new Discord.MessageEmbed()
-                    .setTitle(`Question: "*${interaction.options.getString('question')}*"`)
+                    .setTitle(`[Question: "*${interaction.options.getString('question')}*"](${url})`)
                     .setDescription(answer)
                     .setThumbnail(image)
                     .setFooter({text: 'Made by Jayleaf | Powered by Statmuse', iconURL: 'https://i.imgur.com/uENX5KO.jpg' })
