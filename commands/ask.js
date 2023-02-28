@@ -14,7 +14,7 @@ module.exports = {
     async execute(interaction) {
         let question = interaction.options.getString('question').includes("stats") ? interaction.options.getString('question') : `${interaction.optitString('question')} stats`
         console.log(question)
-        let atQ = question.replace('/ /g', '-')
+        let atQ = question.replace(/ /g, '-')
         var query = atQ
         console.log(query)
         const url = `https://www.statmuse.com/ask/${query}`
