@@ -14,7 +14,7 @@ module.exports = {
     async execute(interaction) {
         let atQ = interaction.options.getString('question').replace(' ', '-')
         var query = atQ.includes("stats") ? atQ.replace('stats', '-stats') : `${atQ}-stats`.replace(' ', '')
-        query = query.replace(' ', '-')
+        query = query.replace('  ', '-')
         console.log(query)
         const url = `https://www.statmuse.com/ask/${query}`
         const data = await fetch(url)
