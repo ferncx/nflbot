@@ -50,7 +50,7 @@ module.exports = {
                 .setAuthor({name: `Question asked by ${interaction.member.nickname ? interaction.member.nickname : interaction.user.username}`, iconURL: interaction.user.displayAvatarURL()})
                 .setColor('#0099ff')
             if (Math.floor(Math.random() * 11) == 10) {
-                embed.addFields({name: "Enjoying the bot? Leave us a review on [top.gg!](https://top.gg/bot/985799424108269569#reviews)", value: "\u200b"})
+                embed.addFields({name: "Enjoying the bot? Leave us a review on top.gg!", value: "https://top.gg/bot/985799424108269569#reviews"})
             } else {
                 console.log('Not this time.')
             }
