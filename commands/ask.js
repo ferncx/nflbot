@@ -13,7 +13,6 @@ module.exports = {
 
     async execute(interaction) {
         let question = interaction.options.getString('question').includes("stats") ? interaction.options.getString('question') : `${interaction.options.getString('question')} stats`
-        console.log(question)
         let atQ = question.replace(/ /g, '-')
         var query = atQ
         console.log(query)
@@ -52,6 +51,8 @@ module.exports = {
                 .setColor('#0099ff')
             if (Math.floor(Math.random() * 11) == 10) {
                 embed.addFields({"name": "Enjoying the bot? Leave us a review on [top.gg!](https://top.gg/bot/985799424108269569#reviews)"})
+            } else {
+                console.log('Not this time.')
             }
             interaction.reply({embeds: [embed]})
             return;
