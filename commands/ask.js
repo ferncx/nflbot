@@ -49,10 +49,8 @@ module.exports = {
                 .setFooter({text: 'Made by Jayleaf | Powered by Statmuse', iconURL: 'https://i.imgur.com/uENX5KO.jpg' })
                 .setAuthor({name: `Question asked by ${interaction.member.nickname ? interaction.member.nickname : interaction.user.username}`, iconURL: interaction.user.displayAvatarURL()})
                 .setColor('#0099ff')
-            if (Math.floor(Math.random() * 11) == 10) {
+            if (Math.floor(Math.random() * 16) == 15) {
                 embed.addFields({name: "Enjoying the bot? Leave us a review on top.gg!", value: "https://top.gg/bot/985799424108269569#reviews"})
-            } else {
-                console.log('Not this time.')
             }
             interaction.reply({embeds: [embed]})
             return;
