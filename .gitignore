@@ -104,4 +104,4 @@ dist
 # IDEs directory
 .idea/
 
-#.env
+.env
