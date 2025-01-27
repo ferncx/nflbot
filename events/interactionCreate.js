@@ -1,6 +1,5 @@
-const { Client, CommandInteraction } = require("discord.js");
-const Embed = require('../helpers/embed');
-const embed = new Embed();
+const { Client, CommandInteraction, MessageEmbed } = require("discord.js");
+const embed = new MessageEmbed();
 /**
  * Listens for the interactionCreate event and tries to respond to the interaction.
  * @type {{once: boolean, name: string, execute(*, *)}}
