@@ -30,7 +30,7 @@ module.exports = {
             client.user.setPresence({
                 activities: [
                     {
-                        name: `Browsing Stats for ${client.guilds.cache.map((g) => g.memberCount).reduce((a, c) => a + c)} users !`,
+                        name: `Browsing Stats! /ask`,
                         type: 'PLAYING'
                     }
                 ],
@@ -41,7 +41,7 @@ module.exports = {
             client.user.setPresence({
                 activities: [
                     {
-                        name: `Browsing Stats for ${client.guilds.cache.map((g) => g.memberCount).reduce((a, c) => a + c)} users !`,
+                        name: `Browsing Stats! /ask`,
                         type: 'PLAYING'
                     }
                 ],
